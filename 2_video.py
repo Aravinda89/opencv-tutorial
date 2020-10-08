@@ -1,7 +1,8 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture(0) # webcam
+cap = cv2.VideoCapture('./images/shore.mov') # video
+# cap = cv2.VideoCapture(0) # webcam
 
 if cap.isOpened() == False:
     print('Cant find video capture')
