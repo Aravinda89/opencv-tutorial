@@ -17,5 +17,10 @@ rgb_split[:,width*2:width*3] = cv2.merge([r,r,r])
 cv2.imshow('channels',rgb_split)
 cv2.moveWindow('channels',0,height)
 
+hsv = cv2.cvtColor(color, cv2.COLOR_BGR2HSV)
+h,s,v = cv2.split(hsv)
+hsv_split = np.concatenate((h,s,v),axis=1)
+cv2.imshow('Split HSV',hsv_split)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
