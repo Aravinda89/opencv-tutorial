@@ -1,3 +1,4 @@
+# Color spaces
 import numpy as np
 import cv2
 
@@ -7,6 +8,7 @@ cv2.moveWindow('Image',0,0)
 print(color.shape)
 height, width, channel = color.shape
 
+# BGR
 b,g,r = cv2.split(color)
 
 rgb_split = np.empty([height,width*3,3],'uint8')
@@ -17,6 +19,7 @@ rgb_split[:,width*2:width*3] = cv2.merge([r,r,r])
 cv2.imshow('channels',rgb_split)
 cv2.moveWindow('channels',0,height)
 
+# HSV
 hsv = cv2.cvtColor(color, cv2.COLOR_BGR2HSV)
 h,s,v = cv2.split(hsv)
 hsv_split = np.concatenate((h,s,v),axis=1)
