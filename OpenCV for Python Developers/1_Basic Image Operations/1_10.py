@@ -15,7 +15,6 @@ def click(event, x, y, flags, param):
 		cv2.circle(canvas,(x,y),radius,color,-1)
 	elif event == cv2.EVENT_MOUSEMOVE and pressed == True:
 		cv2.circle(canvas,(x,y),radius,color,-1)
-		print("Mouse Move")
 	elif event == cv2.EVENT_LBUTTONUP:
 		pressed = False
 
@@ -32,6 +31,11 @@ while True:
 	ch = cv2.waitKey(1)
 	if ch & 0xFF == ord('q'):
 		break
-
+	elif ch & 0XFF == ord('b'):
+		color = (255,0,0)
+	elif ch & 0XFF == ord('g'):
+		color = (0,255,0)
+	elif ch & 0XFF == ord('b'):
+		color = (0,0,255)
 
 cv2.destroyAllWindows()
