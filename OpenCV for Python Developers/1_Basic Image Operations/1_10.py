@@ -35,7 +35,7 @@ while True:
 		color = (255,0,0)
 	elif ch & 0XFF == ord('g'):
 		color = (0,255,0)
-	elif ch & 0XFF == ord('b'):
+	elif ch & 0XFF == ord('r'):
 		color = (0,0,255)
 
 cv2.destroyAllWindows()
