@@ -13,7 +13,8 @@ def click(event, x, y, flags, param):
 	if event == cv2.EVENT_LBUTTONDOWN:
 		pressed = True
 		cv2.circle(canvas,(x,y),radius,color,-1)
-	elif event == cv2.EVENT_MOUSEMOVE:
+	elif event == cv2.EVENT_MOUSEMOVE and pressed == True:
+		cv2.circle(canvas,(x,y),radius,color,-1)
 		print("Mouse Move")
 	elif event == cv2.EVENT_LBUTTONUP:
 		pressed = False
