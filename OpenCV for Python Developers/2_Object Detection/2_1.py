@@ -9,7 +9,7 @@ cv2.imshow('Original BW',bw)
 
 binary = np.zeros([height,width,1],'uint8')
 
-thresh = 85
+thresh = 50
 
 for row in range(0,height):
     for col in range(0,width):
