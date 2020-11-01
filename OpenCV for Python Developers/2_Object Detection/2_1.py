@@ -17,8 +17,8 @@ for row in range(0,height):
 
 cv2.imshow('Slow binary',binary)
 
-ret, thresh = cv2.threshold(bw,thresh,255,cv2.THRESH_BINARY)
-cv2.imshow('CV Threshold',thresh)
+ret, th = cv2.threshold(bw,thresh,255,cv2.THRESH_BINARY)
+cv2.imshow('CV Threshold',th)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
