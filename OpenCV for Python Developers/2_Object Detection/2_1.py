@@ -8,7 +8,6 @@ height, width = bw.shape[0:2]
 cv2.imshow('Original BW',bw)
 
 binary = np.zeros([height,width,1],'uint8')
-
 thresh = 50
 
 for row in range(0,height):
@@ -17,5 +16,9 @@ for row in range(0,height):
             binary[row][col]=255
 
 cv2.imshow('Slow binary',binary)
+
+ret, thresh = cv2.threshold(bw,thresh,255,cv2.THRESH_BINARY)
+cv2.imshow('CV Threshold',thresh)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
