@@ -25,7 +25,8 @@ while True:
     r=1
     for i in np.argsort(outp[0])[::-1][:5]:
         txt = ' "%s" probability "%.3f" ' % (classes[i], outp[0][i] * 100)
-        cv2.putText(frame, txt, (0, 25 + 40*r), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2)
+        cv2.putText(frame, txt, (0, 25 + 40*r), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        (255,0,0), 2)
         r+=1
 
     if ret == True:
