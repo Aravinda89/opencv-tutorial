@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+
 img = cv2.imread('../images/devon.jpg')
 print(img.shape)
 
