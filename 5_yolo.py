@@ -20,9 +20,9 @@ args = parser.parse_args()
 
 # Load names of classes from coco
 
-classes = open('models/YOLOv3/coco.names').read().strip().split('\n')
+classes = open('model/YOLOv3/coco.names').read().strip().split('\n')
 
-net = cv2.dnn.readNetFromDarknet("models/YOLOv3/yolov3.cfg", "models/YOLOv3/yolov3.weights")
+net = cv2.dnn.readNetFromDarknet("model/YOLOv3/yolov3.cfg", "model/YOLOv3/yolov3.weights")
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 

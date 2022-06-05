@@ -49,7 +49,8 @@ def drawPred(classId, conf, left, top, right, bottom):
     #Display the label at the top of the bounding box
     labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
     top = max(top, labelSize[1])
-    cv2.rectangle(frame, (left, top - round(1.5*labelSize[1])), (left + round(1.5*labelSize[0]), top + baseLine), (255, 255, 255), cv2.FILLED)
+    cv2.rectangle(frame, (left, top - round(1.5*labelSize[1])),
+        (left + round(1.5*labelSize[0]), top + baseLine), (255, 255, 255), cv2.FILLED)
     cv2.putText(frame, label, (left, top), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,0), 1)
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
@@ -108,7 +109,8 @@ else:
 
 # Get the video writer initialized to save the output video
 if (not args.image):
-    vid_writer = cv2.VideoWriter(outputFile, cv2.VideoWriter_fourcc('M','J','P','G'), 30, (round(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))
+    vid_writer = cv2.VideoWriter(outputFile, cv2.VideoWriter_fourcc('M','J','P','G'),
+                30, (round(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))
 
 while cv2.waitKey(1) < 0:
 
