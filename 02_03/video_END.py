@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 
 cap = cv2.VideoCapture('../images/shore.mov')
+# cap = cv2.VideoCapture(0) # Webcam
 
 if cap.isOpened() == False:
     print('Cannot open file or video stream')
