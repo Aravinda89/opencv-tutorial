@@ -7,7 +7,8 @@ all_rows = open('../model/synset_words.txt').read().strip().split("\n")
 
 classes = [r[r.find(' ') + 1:] for r in all_rows]
 
-net = cv2.dnn.readNetFromCaffe('../model/bvlc_googlenet.prototxt','../model/bvlc_googlenet.caffemodel')
+net = cv2.dnn.readNetFromCaffe('../model/bvlc_googlenet.prototxt',
+'../model/bvlc_googlenet.caffemodel')
 
 if cap.isOpened() == False:
     print('Cannot open file or video stream')
