@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 
 img = cv2.imread('../images/devon.jpg')
+print(type(img))
 print(img.shape)
 
 cv2.imshow('Image', img)
